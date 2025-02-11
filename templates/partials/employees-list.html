@@ -1,0 +1,17 @@
+{#
+<article class="coworkers">
+  <div class="grid person-list">
+    {% include "partials/coworker-card.html" %} {% endfor %}
+  </div>
+</article>
+#}
+
+<!-- Employees Section -->
+
+<section class="employees centered-content max-width-lg">
+  <h2 id="medarbetare">Medarbetare</h2>
+  <div class="employee-list grid cols-3 gap-sm animate staggered">
+    {% set people = get_section(path="medarbetare/_index.md") %} {% for person
+    in people.pages %} {% include "partials/employee-card.html" %} {% endfor %}
+  </div>
+</section>

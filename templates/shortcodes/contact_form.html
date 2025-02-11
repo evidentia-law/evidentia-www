@@ -1,0 +1,58 @@
+<!--
+      Netlify form setup:
+      1) data-netlify="true" tells Netlify to process this form.
+      2) netlify-honeypot="bot-field" is the spam honeypot.
+      3) <input type="hidden" name="form-name" value="contact" /> is required for Netlify’s form submission.
+    -->
+<form
+  name="contact"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  id="contactForm"
+>
+  <!-- Honeypot field, should be hidden -->
+  <p style="display: none">
+    <label
+      >Fyll inte i det här fältet om du är människa: <input name="bot-field"
+    /></label>
+  </p>
+  <input type="hidden" name="form-name" value="contact" />
+
+  <div>
+    <label for="name">Namn</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      placeholder="Skriv ditt namn"
+      required
+    />
+    <p class="error-message" id="nameError"></p>
+  </div>
+
+  <div>
+    <label for="email">E-post</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      placeholder="namn@exempel.se"
+      required
+    />
+    <p class="error-message" id="emailError"></p>
+  </div>
+
+  <div>
+    <label for="message">Meddelande</label>
+    <textarea
+      id="message"
+      name="message"
+      placeholder="Skriv ditt meddelande här..."
+      required
+    ></textarea>
+    <p class="error-message" id="messageError"></p>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Skicka</button>
+</form>

@@ -1,0 +1,34 @@
+# The URL the site will be built for
+base_url = "https://evidentia.law"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+
+[extra]
+# Replace the flat structure with nested tables
+
+[extra.firm]
+name = "Advokatfirman Evidentia"
+tagline = "Vi står upp för dina rättigheter"
+description = "Advokatfirman Evidentia är specialiserad på brottmål inklusive eko-brottmål och består av advokaterna Carl-Henric Ringblom, Anna Carlén och Anna Alm samt biträdande juristerna Klara Lundberg och Ellen Harald."
+cta_text = "Kontakta oss"
+phone = "08-785 01 15"
+email = "info@evidentia.law"
+address = "Jakob Westingatan 1A"
+zip = "123 45"
+city = "Stockholm"
+office_hours = "Mån-Fre 08:30-16:30"
+phone_hours = "Mån-Fre 08:00-18:00"
+
+# You can add other nested tables as needed
+[extra.social]
+linkedin = "https://linkedin.com/company/evidentialaw"
+twitter = "https://twitter.com/evidentialaw"

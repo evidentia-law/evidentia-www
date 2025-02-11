@@ -1,0 +1,13 @@
+<section id="kontakt" class="contact">
+    <div class=" max-width-sm centered-content ">
+
+        <div class="grid cols-2 gap-sm">
+            <div class="content">
+                <h2>Kontakta oss</h2>
+              {% set contact = get_page(path="contact.md") %} {{contact.content | safe}}
+            </div>
+            {% include "shortcodes/contact_form.html" %}
+              </div>
+        </div>
+    </div>
+</section>

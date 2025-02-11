@@ -1,0 +1,8 @@
+<section class="services max-width-sm centered-content">
+  <h2 id="tjanster">Verksamhetsområden</h2>
+  <div class="service-list grid cols-2 gap-sm staggered animate">
+    {% set services = get_section(path="verksamhetsomrade/_index.md") %} {% for
+    service in services.pages %} {% include "partials/service-single.html" %} {%
+    endfor %}
+  </div>
+</section>

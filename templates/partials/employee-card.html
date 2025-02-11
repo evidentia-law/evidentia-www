@@ -1,0 +1,22 @@
+<div class="card employee staggered-item">
+  {#
+  <img
+    src="/medarbetare/{{person.slug}}/{{person.extra.image}}"
+    alt="{{person.title}}"
+  />
+  #}
+  <div class="card-image">
+    <img
+      src="{{person.permalink}}/{{person.extra.image}}"
+      alt="{{person.title}}"
+      class="employee-image bw-image"
+    />
+  </div>
+  <div class="card-content">
+    <h3>{{person.title}}</h3>
+    <p>{{person.extra.jobTitle}}</p>
+    <a href="/medarbetare/{{person.slug}}">
+      <button class="btn btn-sm">View Profile</button>
+    </a>
+  </div>
+</div>

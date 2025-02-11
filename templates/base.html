@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <script>
+      document.documentElement.classList.remove("no-js");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      {{ config.extra.firm.name }} {% if page.title %} – {{ page.title }} {%
+      endif %}
+    </title>
+    <script src="/js/stagger.js"></script>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+
+  <body>
+    {% include "partials/navigation.html" %} {%block content %} {%endblock%} {%
+    include "partials/footer.html" %}
+  </body>
+</html>
