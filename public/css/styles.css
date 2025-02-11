@@ -1,0 +1,634 @@
+/* Example: Import Open Props at the top if you want them applied globally */
+@import "https://unpkg.com/open-props";
+
+/* Define the layers in the order they will be applied. */
+@layer reset, variables, base, layout, components, utilities, forms, overrides;
+
+/* -------------------------------- */
+/* RESET (optional)                  */
+/* -------------------------------- */
+@layer reset {
+  /* 1. Use a more-intuitive box-sizing model */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* 5. Improve media defaults */
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  /* 6. Inherit fonts for form controls */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  /* 7. Avoid text overflows */
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+  }
+
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+  }
+
+  /*
+    9. Create a root stacking context
+  */
+  #root,
+  #__next {
+    isolation: isolate;
+  }
+}
+
+/* -------------------------------- */
+/* VARIABLES                        */
+/* -------------------------------- */
+@layer variables {
+  :root {
+    --font-body: var(--font-classical-humanist);
+    --font-header: var(--font-old-style);
+
+    --text-1: var(--stone-12);
+    --text-2: var(--stone-9);
+
+    --brand: var(--indigo-9);
+    --brand-highlight: var(--indigo-8);
+    --brand-dark: var(--indigo-10);
+    --brand-text: var(--indigo-0);
+
+    --surface-0: white;
+    --surface-1: var(--stone-0);
+    --surface-2: var(--stone-1);
+    --surface-3: var(--stone-2);
+
+    --section-spacing: var(--size-8);
+
+    --max-width-sm: 900px;
+    --max-width-lg: 1400px;
+    --full-width-with-spacing: calc(100% - var(--size-4));
+
+    --content-max-width-sm: min(
+      var(--full-width-with-spacing),
+      var(--max-width-sm)
+    );
+    --content-max-width-lg: min(
+      var(--full-width-with-spacing),
+      var(--max-width-lg)
+    );
+
+    --main-border: var(--border-size-1) solid var(--surface-2);
+  }
+}
+
+/* -------------------------------- */
+/* BASE                             */
+/* -------------------------------- */
+@layer base {
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    display: grid;
+    font-family: var(--font-body);
+    color: var(--text-1);
+    line-height: var(--font-lineheight-3);
+    background-color: var(--surface-0);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-header);
+    margin: 0; /* or your preference */
+  }
+
+  h1 {
+    font-size: var(--font-size-fluid-3);
+  }
+  h2 {
+    font-size: var(--font-size-fluid-2);
+  }
+  h3 {
+    font-size: var(--font-size-fluid-1);
+  }
+
+  p,
+  ul {
+    margin-block-end: var(--size-2);
+  }
+
+  section {
+    padding-block: var(--size-8);
+  }
+
+  section h2 {
+    margin-block-end: var(--size-4);
+  }
+
+  header,
+  main,
+  section,
+  footer {
+    width: 100%;
+  }
+}
+
+/* -------------------------------- */
+/* LAYOUT                           */
+/* -------------------------------- */
+@layer layout {
+  .centered-content {
+    margin-inline: auto;
+  }
+
+  .max-width-sm {
+    width: var(--content-max-width-sm);
+  }
+
+  .max-width-lg {
+    width: var(--content-max-width-lg);
+  }
+
+  .row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    > * {
+      width: 100%;
+    }
+
+    &.center-row {
+      justify-content: center;
+    }
+
+    &.space-between {
+      justify-content: space-between;
+    }
+
+    &.align-center {
+      align-items: center;
+    }
+
+    &.align-start {
+      align-items: flex-start;
+    }
+
+    &.align-end {
+      align-items: flex-end;
+    }
+
+    &.align-stretch {
+      align-items: stretch;
+    }
+
+    &.wrap {
+      flex-wrap: wrap;
+    }
+
+    &.gap-sm {
+      gap: var(--size-4);
+    }
+    &.gap-md {
+      gap: var(--size-6);
+    }
+    &.gap-lg {
+      gap: var(--size-8);
+    }
+  }
+
+  .grid {
+    display: grid;
+
+    &.gap-sm {
+      gap: var(--size-4);
+    }
+    &.gap-md {
+      gap: var(--size-6);
+    }
+    &.gap-lg {
+      gap: var(--size-8);
+    }
+  }
+
+  @media (min-width: 360px) {
+    .grid.cols-3 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .grid {
+      &.cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      &.cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+
+  hr {
+    border: var(--main-border);
+  }
+}
+
+/* -------------------------------- */
+/* COMPONENTS                       */
+/* -------------------------------- */
+@layer components {
+  /* Buttons */
+  .btn {
+    padding: var(--size-2) var(--size-4);
+    border-radius: var(--radius-2);
+    border: var(--main-border);
+    text-decoration: none;
+    background-color: var(--surface-2);
+    color: var(--text-1);
+
+    &:hover {
+      background-color: var(--surface-3);
+    }
+
+    &.btn-primary {
+      background-color: var(--brand);
+      border-color: var(--brand);
+      color: var(--brand-text);
+
+      &:hover {
+        background-color: var(--brand-highlight);
+      }
+    }
+
+    &.btn-sm {
+      padding: var(--size-1) var(--size-2);
+    }
+  }
+
+  /* Navigation */
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: var(--size-4) var(--size-6);
+    border-bottom: var(--main-border);
+
+    .navigation-brand {
+      min-height: var(--size-8);
+      min-width: var(--size-8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--radius-2);
+      overflow: hidden;
+      text-align: center;
+      box-shadow: var(--shadow-3);
+      background-color: var(--brand);
+      color: var(--brand-text);
+      text-decoration: none;
+      font-weight: 600;
+      font-family: var(--font-system-ui);
+
+      img {
+        max-height: var(--size-8);
+      }
+    }
+
+    .navigation-list {
+      display: flex;
+      list-style: none;
+      gap: var(--size-4);
+    }
+
+    .navigation-item a {
+      text-decoration: none;
+      color: var(--text-2);
+      font-weight: var(--font-weight-6);
+
+      &:hover {
+        color: var(--brand);
+      }
+    }
+  }
+
+  /* Mobile Nav */
+  .nav-toggle {
+    display: none;
+  }
+
+  .hamburger {
+    display: none;
+    gap: var(--size-2);
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+
+    span {
+      width: var(--size-4);
+      height: var(--size-1);
+      background: var(--text-1);
+      border-radius: var(--radius-1);
+    }
+  }
+
+  /* Hero Section */
+  .hero {
+    display: grid;
+    place-items: center;
+    background: var(--gradient-9);
+    min-height: var(--size-15);
+  }
+
+  .hero-content {
+    display: grid;
+    place-items: center;
+    gap: var(--size-2);
+    max-width: var(--max-width-sm);
+
+    p {
+      text-align: center;
+    }
+  }
+
+  /* Example "card" style for repeated patterns */
+  .card {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+
+    &:hover {
+      .card-image {
+        img {
+          filter: saturate(1);
+        }
+      }
+    }
+
+    .card-image {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: var(--indigo-1);
+      img {
+        mix-blend-mode: multiply;
+      }
+    }
+  }
+
+  .employee .card-content {
+    text-align: center;
+    padding: var(--size-3);
+    p {
+      color: var(--text-2);
+    }
+  }
+
+  .service {
+    /* combine with .card as well if desired */
+    display: grid;
+    grid-template-rows: 2lh 1fr auto;
+    gap: var(--size-4);
+    padding: var(--size-4);
+
+    &:nth-child(1) {
+      background-color: var(--indigo-1);
+      color: var(--indigo-11);
+    }
+    &:nth-child(2) {
+      background-color: var(--yellow-1);
+      color: var(--yellow-11);
+    }
+    &:nth-child(3) {
+      background-color: var(--pink-1);
+      color: var(--pink-11);
+    }
+    &:nth-child(4) {
+      background-color: var(--teal-1);
+      color: var(--teal-11);
+    }
+  }
+  .service:hover {
+    box-shadow: var(--shadow-4);
+    transform: translateY(-5px);
+  }
+  .service a {
+    margin-block-start: var(--size-4);
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  /* Contact Form */
+  form {
+    display: grid;
+    gap: var(--size-2);
+
+    label {
+      margin-block-end: var(--size-1);
+    }
+  }
+  .contact input,
+  .contact textarea {
+    width: 100%;
+    padding: var(--size-2);
+    border: var(--main-border);
+    border-radius: 4px;
+  }
+
+  /* Footer */
+  footer {
+    border-block-start: var(--main-border);
+    background-color: var(--surface-0);
+    padding-block: var(--size-8);
+  }
+
+  footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .employee-hero {
+    padding: var(--size-10);
+    background: var(--gradient-29);
+
+    .content {
+      max-width: var(--max-width-lg);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      gap: var(--size-8);
+      padding: var(--size-8);
+      border-radius: var(--radius-2);
+      background: var(--surface-0);
+      box-shadow: var(--shadow-6);
+
+      .left {
+        text-align: center;
+        padding-inline-end: var(--size-8);
+        border-inline-end: var(--main-border);
+      }
+
+      hgroup {
+        h1 {
+          font-size: var(--font-size-5);
+        }
+        p {
+          font-size: var(--font-size-3);
+          color: var(--text-2);
+        }
+      }
+
+      .employee-image {
+        background: var(--indigo-1);
+        width: var(--size-fluid-9);
+        overflow: hidden;
+        height: var(--size-fluid-9);
+        border-radius: var(--radius-round);
+        border: var(--main-border);
+      }
+    }
+  }
+}
+
+/* -------------------------------- */
+/* UTILITIES                        */
+/* -------------------------------- */
+@layer utilities {
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .bw-image {
+    filter: saturate(0);
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .scroll-animation {
+    animation: var(--animation-slide-in-up), var(--animation-fade-in) forwards;
+  }
+  .staggered-item {
+    animation-delay: calc(var(--_delay) * 100ms);
+  }
+  :not(.no-js) .scroll-animation {
+    opacity: 0;
+  }
+}
+
+@layer forms {
+  .contact {
+    padding: var(--size-8);
+    background: var(--surface-0);
+    border-radius: 8px;
+  }
+
+  form {
+    display: grid;
+    gap: var(--size-2);
+  }
+
+  label {
+    color: var(--text-2);
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: var(--size-2) var(--size-3);
+    border: var(--main-border);
+    border-radius: var(--radius-2);
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+}
+
+/* -------------------------------- */
+/* RESPONSIVE RULES                 */
+/* -------------------------------- */
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  .navigation-list {
+    display: none;
+    min-width: var(--size-fluid-10);
+    gap: var(--size-4);
+    position: absolute;
+    border: var(--main-border);
+    border-radius: var(--radius-2);
+    top: 60px;
+    right: 20px;
+    background: var(--surface-0);
+    padding: var(--size-4);
+    box-shadow: var(--shadow-4);
+  }
+  .nav-toggle:checked ~ .navigation-list {
+    display: grid;
+  }
+}
+/* -------------------------------- */
+/* OVERRIDES                        */
+/* (Put any final overrides here)   */
+/* -------------------------------- */
+@layer overrides {
+  /* e.g., .btn { background-color: red !important; } */
+}
