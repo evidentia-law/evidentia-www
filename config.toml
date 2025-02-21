@@ -14,6 +14,12 @@ highlight_code = true
 
 [extra]
 # Replace the flat structure with nested tables
+menu_pages = [
+    { url = "/", name = "Hem" },
+    { url = "/#medarbetare", name = "Medarbetare" },
+    { url = "/#kontakt", name = "Kontakt" },
+    { url = "/#om-oss", name = "Om oss" },
+]
 
 [extra.firm]
 name = "Advokatfirman Evidentia"
