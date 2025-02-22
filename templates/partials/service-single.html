@@ -1,15 +1,14 @@
-<div class="relative">
-  <dt>
+<div class="relative stagger fade-in">
+  <dt class="mb-2">
+    {% if service.extra.icon %} {% set icon_path = "static/icon/" ~
+    service.extra.icon ~ ".svg" %} {% set icon = load_data(path=icon_path) %}
     <div
-      class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-900 stroke-white"
+      class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-700"
     >
-      <object
-        data="{{service.permalink}}{{service.extra.icon}}"
-        type="image/svg+xml"
-        class="h-6 w-6 stroke-white fill-indigo-100"
-      ></object>
+      {{ icon | safe }}
     </div>
-    <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
+    {% endif %}
+    <p class="ml-16 text-lg leading-6 font-bold text-gray-900">
       {{ service.title }}
     </p>
   </dt>

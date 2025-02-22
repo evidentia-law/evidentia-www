@@ -1,5 +1,6 @@
 +++
 title = "Klara Lundberg"
+weight = 4
 [extra]
 jobTitle = "Biträdande Jurist"
 phone = "076-773 19 94"

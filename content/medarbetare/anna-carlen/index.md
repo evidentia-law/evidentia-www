@@ -1,5 +1,6 @@
 +++
 title = "Anna Carlén"
+weight = 2
 [extra]
 jobTitle = "Advokat"
 phone = "076-773 19 94"
