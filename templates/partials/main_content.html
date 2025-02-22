@@ -1,9 +1,19 @@
-<section class="about centered-content prose max-width-sm">
-  {{section.content | safe}}
-</section>
 {#
 <section>
   {% set about = get_page(path="about.md") %} {{about.content | safe}}
 </section>
-#} {% include "partials/employees-list.html" %} {% include
+#}
+<div class="max-w-7xl mx-auto pt-12 pb-2 px-4 sm:px-6 lg:pt-16 lg:pb-4 lg:px-8">
+  <div class="relative">
+    <div class="absolute inset-0 flex items-center" aria-hidden="true">
+      <div class="w-full border-t border-gray-300"></div>
+    </div>
+    <div class="relative flex justify-center">
+      <h2 class="px-3 bg-white text-lg font-medium text-gray-900">
+        Medarbetare
+      </h2>
+    </div>
+  </div>
+</div>
+{% include "partials/employees-list.html" %} {% include
 "partials/service-list.html" %} {% include "partials/contact-us.html" %}

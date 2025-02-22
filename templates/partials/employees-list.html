@@ -8,10 +8,9 @@
 
 <!-- Employees Section -->
 
-<section class="employees centered-content max-width-lg">
-  <h2 id="medarbetare">Medarbetare</h2>
-  <div class="employee-list grid cols-3 gap-sm animate staggered">
+<div class="max-w-7xl mx-auto pt-12 pb-2 px-4 sm:px-6 lg:pt-16 lg:pb-4 lg:px-8">
+  <div class="grid md:grid-cols-3 space-y-4">
     {% set people = get_section(path="medarbetare/_index.md") %} {% for person
     in people.pages %} {% include "partials/employee-card.html" %} {% endfor %}
   </div>
-</section>
+</div>

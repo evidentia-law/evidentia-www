@@ -1,5 +1,20 @@
-<div class="service staggered-item">
-  <h3>{{ service.title }}</h3>
-  <p>{{ service.description }}</p>
-  <a href="/verksamhetsomrade/{{service.slug}}">Läs mer ></a>
+<div class="relative">
+  <dt>
+    <div
+      class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-900 stroke-white"
+    >
+      <object
+        data="{{service.permalink}}{{service.extra.icon}}"
+        type="image/svg+xml"
+        class="h-6 w-6 stroke-white fill-indigo-100"
+      ></object>
+    </div>
+    <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
+      {{ service.title }}
+    </p>
+  </dt>
+  <dd class="ml-16 text-gray-900">
+    {{ service.description }}
+    <a href="/verksamhetsomrade/{{service.slug}}">Läs mer ></a>
+  </dd>
 </div>

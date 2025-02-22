@@ -1,8 +1,9 @@
-<section class="services max-width-sm centered-content">
-  <h2 id="tjanster">Verksamhetsområden</h2>
-  <div class="service-list grid cols-2 gap-sm staggered animate">
+<div class="mt-16">
+  <dl
+    class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10"
+  >
     {% set services = get_section(path="verksamhetsomrade/_index.md") %} {% for
     service in services.pages %} {% include "partials/service-single.html" %} {%
     endfor %}
-  </div>
-</section>
+  </dl>
+</div>
