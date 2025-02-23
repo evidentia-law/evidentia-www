@@ -1,45 +1,20 @@
-<footer>
-  <div class="max-width-lg centered-content grid cols-3">
-    <section>
-      <h3>Company Info</h3>
-      <div class="content">
-        <p class="address">
-          <span>{{config.extra.firm.address}}</span><br />
-          <span>{{config.extra.firm.zip}}, {{config.extra.firm.city}}</span>
-        </p>
-        <div class="contact-info">
-          <p class="phone">
-            <a href="tel:{{config.extra.firm.phone}}"
-              >{{config.extra.firm.phone}}</a
-            >
-          </p>
-          <p class="email">
-            <a href="mailto:{{config.extra.firm.email}}"
-              >{{config.extra.firm.email}}</a
-            >
-          </p>
-        </div>
-      </div>
-    </section>
-    <section>
-      <h3>Site Map</h3>
-      <div class="content">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/services">Services</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
-      </div>
-    </section>
-    <section>
-      <h3>Follow Us</h3>
-      <div class="content">
-        <ul>
-          <li><a href="{{config.extra.social.linkedin}}">LinkedIn</a></li>
-          <li><a href="{{config.extra.social.twitter}}">Twitter</a></li>
-        </ul>
-      </div>
-    </section>
+<footer class="border border-t border-gray-300 bg-white py-12">
+  <div class="mx-auto flex max-w-7xl flex-col gap-8">
+    <div class="flex justify-center gap-8">
+      {% for navItem in config.extra.menu_pages %}
+      <a href="{{ navItem.url }}" class="navigation-link">
+        {{ navItem.name }}
+      </a>
+      {% endfor %}
+    </div>
+    <div class="text-center">© 2025 {{ config.extra.firm.name }}</div>
+    <div class="text-center">
+      <p class="text-sm text-gray-600">
+        Made with love by <a href="https://cv.nsld.se">NSLD</a>.
+      </p>
+      <p class="text-sm text-gray-600">
+        Statically hosted in Sweden by <a href="#">statichost.eu</a>
+      </p>
+    </div>
   </div>
 </footer>

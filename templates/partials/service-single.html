@@ -1,19 +1,15 @@
-<div class="relative stagger fade-in">
-  <dt class="mb-2">
+<div class="relative flex flex-col gap-4 pl-16">
+  <dt class="text-base/7 font-semibold text-gray-900">
     {% if service.extra.icon %} {% set icon_path = "static/icon/" ~
     service.extra.icon ~ ".svg" %} {% set icon = load_data(path=icon_path) %}
     <div
-      class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-700"
+      class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-indigo-600"
     >
       {{ icon | safe }}
     </div>
-    {% endif %}
-    <p class="ml-16 text-lg leading-6 font-bold text-gray-900">
-      {{ service.title }}
-    </p>
+    {% endif %} {{ service.title }}
   </dt>
-  <dd class="ml-16 text-gray-900">
-    {{ service.description }}
-    <a href="/verksamhetsomrade/{{service.slug}}">Läs mer ></a>
-  </dd>
+  <dd class="text-base/7 text-gray-600">{{ service.description }}</dd>
+
+  <a href="/verksamhetsomrade/{{service.slug}}">Läs mer ></a>
 </div>

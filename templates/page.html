@@ -1,11 +1,4 @@
 {%extends "base.html"%} {%block content%} {% set page_title = page.title %} {%
 set page_subtitle = page.description %} {% set cta_text =
 config.extra.firm.cta_text %} {% set cta_link = "#contact" %} {% include
-"partials/hero.html" %}
-
-<section class="page">
-  <main class="content max-width-lg centered-content">
-    {{page.content | safe}}
-  </main>
-</section>
-{%endblock%}
+"partials/hero.html" %} {%endblock%}

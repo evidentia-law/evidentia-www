@@ -1,10 +1,10 @@
 <header class="bg-white">
-  <nav class="max-w-7xl mx-auto px-4">
+  <nav class="mx-auto max-w-7xl px-4">
     <div
-      class="w-full py-6 flex items-center justify-between border border-gray-100 lg:border-none"
+      class="flex w-full items-center justify-between border border-gray-100 py-6 lg:border-none"
     >
-      <a href="/" class="navigation-brand"> EDA </a>
-      <div class="lg:flex flex-wrap py-4 justify-center space-x-6 hidden">
+      <a href="/" class="text-lg font-bold"> Evidentia </a>
+      <div class="hidden flex-wrap justify-center space-x-6 py-4 lg:flex">
         {% for navItem in config.extra.menu_pages %}
         <div class="px-2">
           <a href="{{ navItem.url }}"> {{ navItem.name }} </a>
@@ -12,7 +12,7 @@
         {% endfor %}
       </div>
     </div>
-    <div class="flex flex-wrap py-4 justify-center space-x-6 lg:hidden">
+    <div class="flex flex-wrap justify-center space-x-6 py-4 lg:hidden">
       {% for navItem in config.extra.menu_pages %}
       <div class="px-2">
         <a href="{{ navItem.url }}" class="navigation-link">

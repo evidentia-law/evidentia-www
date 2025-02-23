@@ -1,4 +1,72 @@
-<div class="max-w-7xl mx-auto pt-12 pb-2 px-4 sm:px-6 lg:pt-16 lg:pb-4 lg:px-8">
-  {% set contact = get_page(path="contact.md") %}
-  <div class="prose">{{contact.content | safe}}</div>
-</div>
+<section class="py-24">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mb-10 lg:mb-0">
+      <div class="group h-full w-full">
+        <div class="relative h-full">
+          <div
+            id="map"
+            class="h-128 w-full rounded-2xl bg-indigo-700 object-cover bg-blend-multiply lg:rounded-l-2xl"
+          ></div>
+
+          <h2
+            class="font-manrope absolute top-11 left-11 text-4xl leading-10 font-bold text-white"
+            id="kontakt"
+          >
+            Kontakta oss
+          </h2>
+          <div class="absolute bottom-0 w-full max-w-lg p-8 lg:p-11">
+            <div class="block rounded-lg bg-white p-6">
+              <a href="javascript:;" class="mb-6 flex items-center">
+                {% set icon_path = "static/icon/phone.svg" %} {% set icon =
+                load_data(path=icon_path) %}
+                <div class="contact-icon">{{ icon | safe }}</div>
+
+                <h5 class="ml-5 text-base leading-6 font-normal text-black">
+                  {{config.extra.firm.phone}}
+                </h5>
+              </a>
+              <a href="javascript:;" class="mb-6 flex items-center">
+                {% set icon_path = "static/icon/mail.svg" %} {% set icon =
+                load_data(path=icon_path) %}
+                <div class="contact-icon">{{ icon | safe }}</div>
+                <h5 class="ml-5 text-base leading-6 font-normal text-black">
+                  {{config.extra.firm.email}}
+                </h5>
+              </a>
+              <a href="javascript:;" class="flex items-center">
+                {% set icon_path = "static/icon/map-pin.svg" %} {% set icon =
+                load_data(path=icon_path) %}
+                <div class="contact-icon">{{ icon | safe }}</div>
+                <h5
+                  class="ml-5 grid text-base leading-6 font-normal text-black sm:flex"
+                >
+                  <span>{{config.extra.firm.address}}, </span>
+                  <span
+                    >{{config.extra.firm.zip}} {{config.extra.firm.city}}</span
+                  >
+                </h5>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  mapboxgl.accessToken =
+    "pk.eyJ1IjoibnNsZCIsImEiOiJjbTdnNjkwa2owbXpsMmpzNzA2aTFweDQzIn0.iFsn26SSNMkR_sSiEANCag";
+  const map = new mapboxgl.Map({
+    container: "map", // container ID
+    style: "mapbox://styles/mapbox/dark-v11", // style URL
+    center: [18.0443, 59.3269], // starting position [lng, lat]
+    zoom: 13, // starting zoom
+    interactive: false,
+  });
+  const marker = new mapboxgl.Marker({
+    color: "#818CF8",
+  })
+    .setLngLat([18.0443, 59.3269])
+    .addTo(map);
+</script>

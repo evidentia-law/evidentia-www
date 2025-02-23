@@ -2,11 +2,11 @@ const CSS_DELAY_VAR = `--_delay`;
 
 window.onload = () => {
   setupObservers();
-  createDelay();
+  //   createDelay();
 };
 
 function setupObservers() {
-  const animationTarget = document.querySelectorAll(".animate");
+  const animationTarget = document.querySelectorAll(".animate-fade-in-up");
   for (let i = 0; i < animationTarget.length; i++) {
     observer.observe(animationTarget[i]);
   }
@@ -16,9 +16,8 @@ function addDelayToElement(element, index) {
   const delayClass = `${CSS_DELAY_VAR}:${index};`;
   element.style = delayClass;
 }
-
 function createDelay() {
-  const staggered = document.querySelectorAll(".staggered");
+  const staggered = document.querySelectorAll(".animate-fade-in-up");
 
   staggered.forEach((elements) => {
     let i = 0;
@@ -33,7 +32,7 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       for (child of entry.target.children) {
-        child.classList.add("scroll-animation");
+        child.classList.add("animate-fade-in-up");
       }
     } else {
       //   entry.target.classList.remove("scroll-animation");

@@ -1,25 +1,34 @@
 {%extends "page.html"%} {%block content%}
 <!-- Employee Hero Section -->
-<div class="employee-page">
-  <div class="employee-hero">
-    <div class="content centered-content">
-      <div class="left">
-        <div class="employee-image">
-          <img
-            src="{{page.permalink}}/{{page.extra.image}}"
-            alt="Employee Photo"
-            class="bw-image"
-          />
-        </div>
-        <hgroup>
-          <h1>{{page.title}}</h1>
-          <p>{{page.extra.jobTitle}}</p>
-        </hgroup>
+<div class="mx-auto mt-6 mb-4 max-w-xl px-4 sm:px-6 lg:mt-4 lg:px-8">
+  <div class="flex flex-col gap-8">
+    <div class="h-98 shadow">
+      {% set img_path = "static/img/" ~ page.slug ~ ".jpg" %} {% set img =
+      resize_image(path=img_path, width=400, height=300, format="webp") %}
+      <img
+        src="{{img.url}}"
+        alt="{{page.title}}"
+        class="h-full w-full rounded-xl object-cover transition duration-300"
+      />
+    </div>
+    <div class="flex flex-col gap-2">
+      <hgroup class="flex flex-col gap-2">
+        <h1 class="text-3xl font-semibold text-gray-900">{{page.title}}</h1>
+        <p class="text-sm text-gray-500">{{page.extra.jobTitle}}</p>
+      </hgroup>
+      <div class="flex gap-4">
+        {% set icon_path = "static/icon/mail.svg" %} {% set icon =
+        load_data(path=icon_path) %} {% set button_url =
+        "mailto:{{page.extra.email}}" %} {% set button_text = "Epost" %} {%
+        include "partials/card-button.html" %} {% set icon_path =
+        "static/icon/phone.svg" %} {% set icon = load_data(path=icon_path) %} {%
+        set button_url = "tel:{{page.extra.phone}}" %} {% set button_text =
+        "Telefon" %} {% include "partials/card-button.html" %}
       </div>
-      {% if page.content %}
-      <div class="right">{{page.content | safe}}</div>
-      {% endif %}
+      <div class="max-w-2xl text-gray-900">
+        <article class="prose">{{page.content | safe}}</article>
+      </div>
     </div>
   </div>
 </div>
-{%endblock%}
+{% include "partials/employees-list.html" %} {%endblock%}
