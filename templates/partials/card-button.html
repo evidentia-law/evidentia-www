@@ -1,0 +1,8 @@
+<!-- prettier-ignore -->
+<div
+  class="{% if is_right %} border-l {% endif %} flex  items-center "
+>
+  <div class="employee-icon">{{ icon | safe }}</div>
+
+  <a href="tel:{{button_url}}">{{button_text}}</a>
+</div>

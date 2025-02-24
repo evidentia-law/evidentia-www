@@ -1,29 +1,15 @@
-{#
-<section class="hero">
-  <div class="hero-content">
-    <hgroup>
-      <h1 class="hero-title">{{ config.extra.firm.name }}</h1>
-      <p class="under-hero">{{ config.extra.firm.description }}</p>
+<section class="bg-white pt-12">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-6">
+    <hgroup class="mx-auto max-w-2xl lg:text-center">
+      <h2 class="text-base/7 font-semibold text-indigo-600">Advokatbyrå</h2>
+      <h1
+        class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl lg:text-balance"
+      >
+        {{page_title}}
+      </h1>
+      <p class="mt-6 text-lg/8 text-gray-600">{{page_subtitle}}</p>
     </hgroup>
-    <div class="button-list">
-      <button class="button primary">Skicka ett brev</button>
-      <button>Kontakta oss</button>
-    </div>
-  </div>
-
-  <div class="hero-image">
-    <img src="/home.webp" alt="Hero image" />
-  </div>
-</section>
-#}
-<section class="hero">
-  <div class="hero-content max-width-lg centered-content">
-    <h1>{{page_title}}</h1>
-    <p>{{page_subtitle}}</p>
-    {% if cta_text and cta_link %}
-    <a href="/{{cta_link}}"
-      ><button class="btn btn-primary">{{cta_text}}</button></a
-    >
-    {% endif %}
+    {% set divider_title = "Verksamhetsområden" %} {% include
+    "partials/divider.html" %} {% include "partials/service-list.html" %}
   </div>
 </section>

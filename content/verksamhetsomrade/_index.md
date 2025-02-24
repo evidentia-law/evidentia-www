@@ -2,6 +2,8 @@
 title = "Verksamhetsområden"
 description = "Our comprehensive range of legal services designed to protect your rights and interests."
 weight = 3
+[extra]
+exclude_from_cms = true
 +++
 
 ## Services

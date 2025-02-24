@@ -1,30 +1,25 @@
-<div class="navbar">
-  <nav class="navigation max-width-lg centered-content">
-    <div>
-      <a href="/" class="navigation-brand"> EDA </a>
+<header class="bg-white">
+  <nav class="mx-auto max-w-7xl px-4">
+    <div
+      class="flex w-full items-center justify-between border border-gray-100 py-6 lg:border-none"
+    >
+      <a href="/" class="text-lg font-bold"> {{site_data.firm.name}} </a>
+      <div class="hidden flex-wrap justify-center space-x-6 py-4 lg:flex">
+        {% for navItem in site_data.menu_pages %}
+        <div class="px-2">
+          <a href="{{ navItem.url }}"> {{ navItem.name }} </a>
+        </div>
+        {% endfor %}
+      </div>
     </div>
-    <!-- Mobile Toggle -->
-    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-    <label for="nav-toggle" class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-    <ul class="navigation-list">
-      <li class="navigation-item">
-        <a href="/#specialister-pa-brottmal"
-          ><span>Specialister på brottmål</span></a
-        >
-      </li>
-      <li class="navigation-item">
-        <a href="/#medarbetare"><span>Medarbetare</span></a>
-      </li>
-      <li class="navigation-item">
-        <a href="/#tjanster"><span>Våra tjänster</span></a>
-      </li>
-      <li class="navigation-item">
-        <a href="/#kontakt"><span>Kontakt</span></a>
-      </li>
-    </ul>
+    <div class="flex flex-wrap justify-center space-x-6 py-4 lg:hidden">
+      {% for navItem in site_data.menu_pages %}
+      <div class="px-2">
+        <a href="{{ navItem.url }}" class="navigation-link">
+          {{ navItem.name }}
+        </a>
+      </div>
+      {% endfor %}
+    </div>
   </nav>
-</div>
+</header>

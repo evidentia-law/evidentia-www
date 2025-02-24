@@ -1,4 +1,5 @@
 /* Example: Import Open Props at the top if you want them applied globally */
+@import "tailwindcss";
 @import "https://unpkg.com/open-props";
 
 /* Define the layers in the order they will be applied. */

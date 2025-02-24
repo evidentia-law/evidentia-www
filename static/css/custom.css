@@ -1,0 +1,24 @@
+* {
+  scroll-behavior: smooth;
+}
+.icon-tabler {
+  stroke: var(--color-indigo-100);
+}
+
+.employee-icon > .icon-tabler {
+  stroke: var(--color-gray-600);
+  height: 1em;
+}
+
+.contact-icon > .icon-tabler {
+  stroke: var(--color-indigo-700);
+}
+
+a {
+  text-decoration: underline dotted;
+
+  &:hover {
+    text-decoration: underline;
+    color: var(--color-gray-700);
+  }
+}

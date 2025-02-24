@@ -1,9 +1,3 @@
-<section class="about centered-content prose max-width-sm">
-  {{section.content | safe}}
-</section>
-{#
-<section>
-  {% set about = get_page(path="about.md") %} {{about.content | safe}}
-</section>
-#} {% include "partials/employees-list.html" %} {% include
-"partials/service-list.html" %} {% include "partials/contact-us.html" %}
+{% set divider_title = "Medarbetare" %} {% include "partials/divider.html" %} {%
+include "partials/employees-list.html" %} {% include "partials/contact-us.html"
+%}

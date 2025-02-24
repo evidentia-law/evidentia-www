@@ -14,9 +14,15 @@ highlight_code = true
 
 [extra]
 # Replace the flat structure with nested tables
+menu_pages = [
+    { url = "/", name = "Hem" },
+    { url = "/#verksamhetsomraden", name = "Verksamhetsområden" },
+    { url = "/#medarbetare", name = "Medarbetare" },
+    { url = "/#kontakt", name = "Kontakt" },
+]
 
 [extra.firm]
-name = "Advokatfirman Evidentia"
+name = "Evidentia"
 tagline = "Vi står upp för dina rättigheter"
 description = "Advokatfirman Evidentia är specialiserad på brottmål inklusive eko-brottmål och består av advokaterna Carl-Henric Ringblom, Anna Carlén och Anna Alm samt biträdande juristerna Klara Lundberg och Ellen Harald."
 cta_text = "Kontakta oss"
@@ -25,8 +31,8 @@ email = "info@evidentia.law"
 address = "Jakob Westingatan 1A"
 zip = "123 45"
 city = "Stockholm"
-office_hours = "Mån-Fre 08:30-16:30"
-phone_hours = "Mån-Fre 08:00-18:00"
+office_hours = "08:30-16:30"
+phone_hours = "08:00-18:00"
 
 # You can add other nested tables as needed
 [extra.social]

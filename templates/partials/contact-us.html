@@ -1,13 +1,75 @@
-<section id="kontakt" class="contact">
-    <div class=" max-width-sm centered-content ">
+<section class="pb-8">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mb-10 lg:mb-0">
+      <div class="group w-full">
+        <div class="relative flex">
+          <div
+            id="map"
+            class="min-h-128 w-full rounded-2xl object-cover bg-blend-multiply lg:rounded-l-2xl"
+          ></div>
 
-        <div class="grid cols-2 gap-sm">
-            <div class="content">
-                <h2>Kontakta oss</h2>
-              {% set contact = get_page(path="contact.md") %} {{contact.content | safe}}
+          <div
+            class="absolute top-0 w-full max-w-lg overflow-hidden p-8 lg:p-11"
+          >
+            <div class="block rounded-lg bg-white p-6 backdrop-blur-md">
+              <a
+                href="tel:{{site_data.firm.contact.phone}}"
+                class="mb-6 flex items-center"
+              >
+                {% set icon_path = "static/icon/phone.svg" %} {% set icon =
+                load_data(path=icon_path) %}
+                <div class="contact-icon">{{ icon | safe }}</div>
+
+                <h5 class="ml-5 text-base leading-6 font-normal text-black">
+                  {{site_data.firm.contact.phone}}
+                </h5>
+              </a>
+              <a
+                href="mailto:{{site_data.firm.contact.email}}"
+                class="mb-6 flex items-center"
+              >
+                {% set icon_path = "static/icon/mail.svg" %} {% set icon =
+                load_data(path=icon_path) %}
+                <div class="contact-icon">{{ icon | safe }}</div>
+                <h5 class="ml-5 text-base leading-6 font-normal text-black">
+                  {{site_data.firm.contact.email}}
+                </h5>
+              </a>
+              <a href="mapbox" class="flex items-center">
+                {% set icon_path = "static/icon/map-pin.svg" %} {% set icon =
+                load_data(path=icon_path) %}
+                <div class="contact-icon">{{ icon | safe }}</div>
+                <h5
+                  class="ml-5 grid text-base leading-6 font-normal text-black sm:flex"
+                >
+                  <span>{{site_data.firm.address.street}}, </span>
+                  <span
+                    >{{site_data.firm.address.zip}}
+                    {{site_data.firm.address.city}}</span
+                  >
+                </h5>
+              </a>
             </div>
-            {% include "shortcodes/contact_form.html" %}
-              </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </section>
+{% include "partials/contact-form.html" %}
+
+<script>
+  mapboxgl.accessToken =
+    "pk.eyJ1IjoibnNsZCIsImEiOiJjbTdnNjkwa2owbXpsMmpzNzA2aTFweDQzIn0.iFsn26SSNMkR_sSiEANCag";
+  const map = new mapboxgl.Map({
+    container: "map", // container ID
+    style: "mapbox://styles/mapbox/dark-v11", // style URL
+    center: [18.0443, 59.3269], // starting position [lng, lat]
+    zoom: 13, // starting zoom
+  });
+  const marker = new mapboxgl.Marker({
+    color: "#818CF8",
+  })
+    .setLngLat([18.0443, 59.3269])
+    .addTo(map);
+</script>

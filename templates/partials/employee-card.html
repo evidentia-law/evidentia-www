@@ -1,22 +1,26 @@
-<div class="card employee staggered-item">
-  {#
-  <img
-    src="/medarbetare/{{person.slug}}/{{person.extra.image}}"
-    alt="{{person.title}}"
-  />
-  #}
-  <div class="card-image">
+<div class="group flex flex-col gap-4">
+  <div class="h-48 w-full rounded-lg sm:h-full">
+    {% set img_path = person.extra.thumbnail %} {% set img =
+    resize_image(path=img_path, width=400, height=300, format="webp") %}
     <img
-      src="{{person.permalink}}/{{person.extra.image}}"
+      src="{{img.url}}"
       alt="{{person.title}}"
-      class="employee-image bw-image"
+      class="aspect-square h-full w-full rounded-xl object-cover saturate-0 transition duration-300 group-hover:saturate-100"
     />
   </div>
-  <div class="card-content">
-    <h3>{{person.title}}</h3>
-    <p>{{person.extra.jobTitle}}</p>
-    <a href="/medarbetare/{{person.slug}}">
-      <button class="btn btn-sm">View Profile</button>
-    </a>
+  <div class="flex w-full flex-col justify-end gap-2">
+    <hgroup>
+      <p class="text-lg font-semibold text-gray-900">{{person.title}}</p>
+      <p class="text-sm text-gray-500">{{person.extra.jobTitle}}</p>
+    </hgroup>
+    <div class="flex gap-4">
+      {% set icon_path = "static/icon/mail.svg" %} {% set icon =
+      load_data(path=icon_path) %} {% set button_url =
+      "mailto:{{person.extra.email}}" %} {% set button_text = "Epost" %} {%
+      include "partials/card-button.html" %} {% set icon_path =
+      "static/icon/phone.svg" %} {% set icon = load_data(path=icon_path) %} {%
+      set button_url = "tel:{{person.extra.phone}}" %} {% set button_text =
+      "Telefon" %} {% include "partials/card-button.html" %}
+    </div>
   </div>
 </div>
