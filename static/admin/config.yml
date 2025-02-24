@@ -1,12 +1,5 @@
 local_backend: true
 media_folder: "/static/img/uploads"
-media_library:
-  name: "s3"
-  config:
-    bucket: "evidentia.law"
-    access_key_id: "AKIAV3YBZ3YVZ2K3EJX6"
-    endpoint: ""
-    secret_access_key: ""
 backend:
   name: git-gateway
   branch: "main"
