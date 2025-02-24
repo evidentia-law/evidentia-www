@@ -1,21 +1,9 @@
-<div class="mx-auto max-w-7xl px-4 pt-12 pb-2 sm:px-6 lg:px-8 lg:pt-24 lg:pb-4">
+<div class="mx-auto max-w-7xl px-4 pb-2 sm:px-6 lg:px-8 lg:pb-4">
+  {% set divider_title = "Medarbetare" %} {% include "partials/divider.html" %}
   <div class="flex flex-col gap-12 lg:flex-row">
-    <header class="lg:max-w-sm">
-      <hgroup>
-        <h2
-          class="text-3xl font-semibold tracking-tight text-gray-900"
-          id="medarbetare"
-        >
-          Medarbetare
-        </h2>
-        <p class="mt-2 text-lg/8 text-gray-600">
-          Tempor nulla nostrud elit pariatur anim aute esse pariatur officia eu
-          commodo do ea. Magna do pariatur nostrud adipisicing tempor sunt
-          pariatur id quis irure sunt ullamco minim.
-        </p>
-      </hgroup>
-    </header>
-    <div class="staggered grid gap-16 sm:grid-cols-2 lg:grid-cols-1">
+    <div
+      class="staggered grid grid-cols-2 gap-16 sm:grid-cols-3 md:grid-cols-5"
+    >
       {% set people = get_section(path="medarbetare/_index.md") %} {% for person
       in people.pages %} {% include "partials/employee-card.html" %} {% endfor
       %}

@@ -1,0 +1,38 @@
+[[menu_pages]]
+url = "/"
+name = "Hem"
+
+[[menu_pages]]
+url = "/"
+name = "Medarbetare"
+
+[[menu_pages]]
+url = "/"
+name = "Kontakt"
+
+[[menu_pages]]
+url = "/"
+name = "Verksamhetsområden"
+
+[firm]
+name = "Evidentia"
+tagline = "Vi står upp för dina rättigheter"
+description = "Advokatfirman Evidentia är specialiserad på brottmål inklusive eko-brottmål och består av advokaterna Carl-Henric Ringblom, Anna Carlén och Anna Alm samt biträdande juristerna Klara Lundberg och Ellen Harald."
+
+[firm.contact]
+cta_text = "Kontakta oss"
+phone = "08-785 01 15"
+email = "info@evidentia.law"
+
+[firm.address]
+street = "Jakob Westingatan 1A"
+zip = "12345"
+city = "Stockholm"
+
+[firm.hours]
+office = "08:30-16:30"
+phone = "08:00-18:00"
+
+[social]
+linkedin = " https://linkedin.com/company/evidentialaw"
+twitter = "https://twitter.com/evidentialaw"

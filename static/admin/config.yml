@@ -1,0 +1,112 @@
+local_backend: true
+media_folder: "/static/img/uploads"
+backend:
+  name: git-gateway
+  branch: "main"
+collections:
+  - name: "employees" # Used in routes, e.g., /admin/collections/blog
+    label: "Medarbetare" # Used in the UI
+    folder: "content/medarbetare" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    filter:
+      field: "exclude_from_cms"
+      value: false
+
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Namn", name: "title", widget: "string" }
+      - { label: "Biografi", name: "body", widget: "markdown" }
+      - { label: "Ordning", name: "weight", widget: "number" }
+      - label: "Information"
+        name: "extra"
+        widget: "object"
+        fields:
+          - { label: "Jobbtitel", name: "jobTitle", widget: "string" }
+          - { label: "Featured Image", name: "thumbnail", widget: "image" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Phone", name: "phone", widget: "string" }
+      - {
+          label: "Exclude from CMS",
+          name: "exclude_from_cms",
+          widget: "hidden",
+          default: false,
+        }
+  - name: "service" # Used in routes, e.g., /admin/collections/blog
+    label: "Verksamhetsområde" # Used in the UI
+    folder: "content/verksamhetsomrade" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    filter:
+      field: "exclude_from_cms"
+      value: false
+
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    summary: "{{title}}-{{body | truncate(20, '***')}}"
+    fields: # The fields for each document, usually in front matter
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Brödtext", name: "body", widget: "markdown" }
+      - { label: "Utdrag", name: "description", widget: "text" }
+      - { label: "Ordning", name: "weight", widget: "number" }
+      - label: "Information"
+        name: "extra"
+        widget: "object"
+        fields:
+          - {
+              label: "Ikon",
+              name: "icon",
+              widget: "select",
+              options: ["scale", "gavel", "laurel-wreath", "friends"],
+            }
+      - {
+          label: "Exclude from CMS",
+          name: "exclude_from_cms",
+          widget: "hidden",
+          default: false,
+        }
+  - name: "settings"
+    label: "Settings"
+    editor:
+      preview: false
+    files:
+      - name: "global"
+        label: "Global Settings"
+        file: "data/site.toml"
+        fields:
+          - label: "Menu Pages"
+            name: "menu_pages"
+            widget: "list"
+            fields:
+              - { label: "URL", name: "url", widget: "string" }
+              - { label: "Name", name: "name", widget: "string" }
+          - label: "Firm"
+            name: "firm"
+            widget: "object"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Tagline", name: "tagline", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Contact"
+                name: "contact"
+                widget: "object"
+                fields:
+                  - { label: "CTA Text", name: "cta_text", widget: "string" }
+                  - { label: "Phone", name: "phone", widget: "string" }
+                  - { label: "Email", name: "email", widget: "string" }
+              - label: "Address"
+                name: "address"
+                widget: "object"
+                fields:
+                  - { label: "Street", name: "street", widget: "string" }
+                  - { label: "ZIP", name: "zip", widget: "string" }
+                  - { label: "City", name: "city", widget: "string" }
+              - label: "Hours"
+                name: "hours"
+                widget: "object"
+                fields:
+                  - { label: "Office Hours", name: "office", widget: "string" }
+                  - { label: "Phone Hours", name: "phone", widget: "string" }
+          - label: "Social"
+            name: "social"
+            widget: "object"
+            fields:
+              - { label: "LinkedIn", name: "linkedin", widget: "string" }
+              - { label: "Twitter", name: "twitter", widget: "string" }

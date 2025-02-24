@@ -1,9 +1,9 @@
 {%extends "page.html"%} {%block content%}
-<!-- Employee Hero Section -->
+
 <div class="mx-auto mt-6 mb-4 max-w-xl px-4 sm:px-6 lg:mt-4 lg:px-8">
   <div class="flex flex-col gap-8">
     <div class="h-98 shadow">
-      {% set img_path = "static/img/" ~ page.slug ~ ".jpg" %} {% set img =
+      {% set img_path = page.extra.thumbnail %} {% set img =
       resize_image(path=img_path, width=400, height=300, format="webp") %}
       <img
         src="{{img.url}}"

@@ -1,11 +1,13 @@
-+++
-title = "Målsägandebiträde & Särskilld företrädare"
-description = "Som målsägandebiträde erbjuder vi stöd och rättslig hjälp för dig som är utsatt för brott. Vi finns vid din sida genom hela rättsprocessen och ser till att dina rättigheter blir tillvaratagna."
-weight = 2
-[extra]
-icon = "gavel"
-+++
-
+---
+title: Målsägandebiträde & Särskilld företrädare
+description: "Ea aliqua exercitation voluptate labore occaecat eu aliqua labore
+  sint dolor mollit dolore. Proident ea non anim enim. Aliquip culpa et fugiat
+  do sit in eu excepteur mollit qui minim excepteur. "
+weight: 1
+extra:
+  icon: gavel
+exclude_from_cms: false
+---
 Ea aliqua exercitation voluptate labore occaecat eu aliqua labore sint dolor mollit dolore. Proident ea non anim enim. Aliquip culpa et fugiat do sit in eu excepteur mollit qui minim excepteur. Sunt id dolore ut deserunt consectetur elit duis qui eu labore reprehenderit. Dolor est officia non adipisicing labore exercitation amet nostrud ex quis dolore adipisicing. Veniam do est culpa est dolore reprehenderit.
 
 Aliqua magna velit quis commodo Lorem elit qui commodo. Aliqua dolor occaecat nisi laborum consectetur laborum laborum. Dolore magna incididunt tempor exercitation Lorem adipisicing anim. Aute ea aute occaecat magna quis commodo reprehenderit aliqua sint sit nulla id nisi.
