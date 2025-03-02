@@ -1,2 +1,23 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
+@theme {
+  --animate-fadeIn: fadeIn 0.5s ease-out forward;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+}
+("body:not(.no-js) &")
+
+@custom-variant js-enabled {
+  body:not(.no-js) {
+    @slot;
+  }
+}
