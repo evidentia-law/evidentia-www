@@ -1,25 +1,23 @@
-<header class="bg-white">
-  <nav class="mx-auto max-w-7xl px-4">
-    <div
-      class="flex w-full items-center justify-between border border-gray-100 py-6 lg:border-none"
-    >
-      <a href="/" class="text-lg font-bold"> {{site_data.firm.name}} </a>
-      <div class="hidden flex-wrap justify-center space-x-6 py-4 lg:flex">
-        {% for navItem in site_data.menu_pages %}
-        <div class="px-2">
-          <a href="{{ navItem.url }}"> {{ navItem.name }} </a>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-    <div class="flex flex-wrap justify-center space-x-6 py-4 lg:hidden">
-      {% for navItem in site_data.menu_pages %}
-      <div class="px-2">
-        <a href="{{ navItem.url }}" class="navigation-link">
-          {{ navItem.name }}
-        </a>
-      </div>
-      {% endfor %}
-    </div>
-  </nav>
+<header class="bg-white border border-b border-stone-300">
+	<nav class="mx-auto max-w-7xl px-4">
+		<div class="flex w-full items-center justify-between border border-gray-100 py-6 lg:border-none">
+			<a href="/" class="text-lg font-bold"> {{site_data.firm.name}} </a>
+			<div class="hidden flex-wrap justify-center space-x-6 py-4 lg:flex">
+				{% for navItem in site_data.menu_pages %}
+				<div class="px-2">
+					<a href="{{ navItem.url }}"> {{ navItem.name }} </a>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="flex flex-wrap justify-center space-x-6 py-4 lg:hidden">
+			{% for navItem in site_data.menu_pages %}
+			<div class="px-2">
+				<a href="{{ navItem.url }}" class="navigation-link">
+					{{ navItem.name }}
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	</nav>
 </header>

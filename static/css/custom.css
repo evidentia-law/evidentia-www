@@ -2,7 +2,7 @@
   scroll-behavior: smooth;
 }
 .icon-tabler {
-  stroke: var(--color-indigo-100);
+  stroke: var(--color-blue-100);
 }
 
 .employee-icon > .icon-tabler {
@@ -11,7 +11,7 @@
 }
 
 .contact-icon > .icon-tabler {
-  stroke: var(--color-indigo-700);
+  stroke: var(--color-blue-700);
 }
 
 a {
