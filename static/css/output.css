@@ -1167,6 +1167,12 @@
   .bg-indigo-600 {
     background-color: var(--color-indigo-600);
   }
+  .bg-inherit {
+    background-color: inherit;
+  }
+  .bg-stone-50 {
+    background-color: var(--color-stone-50);
+  }
   .bg-stone-100 {
     background-color: var(--color-stone-100);
   }
