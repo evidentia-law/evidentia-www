@@ -1,4 +1,4 @@
-<div class="group flex flex-col gap-4">
+<div class="group flex flex-col gap-2">
   <div class="h-48 w-full rounded-lg sm:h-full">
     {% set img_path = person.extra.thumbnail %} {% set img =
     resize_image(path=img_path, width=400, height=300, format="webp") %}
@@ -22,5 +22,8 @@
       set button_url = "tel:{{person.extra.phone}}" %} {% set button_text =
       "Telefon" %} {% include "partials/card-button.html" %}
     </div>
+    <a href="/medarbetare/{{person.slug}}" class="text-sm text-gray-500"
+      >Läs mer</a
+    >
   </div>
 </div>
