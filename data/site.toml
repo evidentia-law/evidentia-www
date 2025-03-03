@@ -3,15 +3,15 @@ url = "/"
 name = "Hem"
 
 [[menu_pages]]
-url = "/"
+url = "/#medarbetare"
 name = "Medarbetare"
 
 [[menu_pages]]
-url = "/"
+url = "/#kontakt"
 name = "Kontakt"
 
 [[menu_pages]]
-url = "/"
+url = "/#verksamhetsomraden"
 name = "Verksamhetsområden"
 
 [firm]
