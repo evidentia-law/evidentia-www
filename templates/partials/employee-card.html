@@ -10,7 +10,10 @@
   </div>
   <div class="flex w-full flex-col justify-end gap-2">
     <hgroup>
-      <p class="text-lg font-semibold text-gray-900">{{person.title}}</p>
+      <a href="/medarbetare/{{person.slug}}" class="text-lg font-semibold"
+        >{{person.title}}</a
+      >
+
       <p class="text-sm text-gray-500">{{person.extra.jobTitle}}</p>
     </hgroup>
     <div class="flex gap-4">
@@ -22,8 +25,10 @@
       set button_url = "tel:{{person.extra.phone}}" %} {% set button_text =
       "Telefon" %} {% include "partials/card-button.html" %}
     </div>
+    {#
     <a href="/medarbetare/{{person.slug}}" class="text-sm text-gray-500"
       >Läs mer</a
     >
+    #}
   </div>
 </div>

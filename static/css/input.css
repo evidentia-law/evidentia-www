@@ -13,6 +13,9 @@
       transform: translateY(0px);
     }
   }
+  a {
+    @apply cursor-pointer;
+  }
 }
 ("body:not(.no-js) &")
 
