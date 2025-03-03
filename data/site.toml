@@ -3,20 +3,20 @@ url = "/"
 name = "Hem"
 
 [[menu_pages]]
-url = "/"
+url = "/#medarbetare"
 name = "Medarbetare"
 
 [[menu_pages]]
-url = "/"
+url = "/#kontakt"
 name = "Kontakt"
 
 [[menu_pages]]
-url = "/"
+url = "/#verksamhetsomraden"
 name = "Verksamhetsområden"
 
 [firm]
 name = "Evidentia"
-tagline = "Vi står upp för dina rättigheter"
+tagline = "Advokatfirma"
 description = "Advokatfirman Evidentia är specialiserad på brottmål inklusive eko-brottmål och består av advokaterna Carl-Henric Ringblom, Anna Carlén och Anna Alm samt biträdande juristerna Klara Lundberg och Ellen Harald."
 
 [firm.contact]
