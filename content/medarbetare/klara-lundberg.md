@@ -1,9 +1,9 @@
 ---
 title: Klara Lundberg
-weight: 2
+weight: 4
 extra:
-  jobTitle: Advokat
-  thumbnail: /static/img/uploads/klara-lundbergio.jpg
+  jobTitle: Biträdande jurist
+  thumbnail: /static/img/uploads/img_8719_2.jpg
   bio: test
   email: klara.lundberg@evidentia.law
   phone: "0767731994"
