@@ -16,7 +16,7 @@ name = "Verksamhetsområden"
 
 [firm]
 name = "Evidentia"
-tagline = "Advokatfirma"
+tagline = "Advokatfirman"
 description = "Advokatfirman Evidentia är specialiserad på brottmål inklusive eko-brottmål och består av advokaterna Carl-Henric Ringblom, Anna Carlén och Anna Alm samt biträdande juristerna Klara Lundberg och Ellen Harald."
 
 [firm.contact]
