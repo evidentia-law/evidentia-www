@@ -7,14 +7,19 @@
       </a>
       {% endfor %}
     </div>
-    <div class="text-center">© 2025 {{ config.extra.firm.name }}</div>
-    <div class="text-center">
-      <p class="text-sm text-gray-600">
-        Made with love by <a href="https://cv.nsld.se">NSLD</a>.
+    <div
+      class="flex w-full flex-col gap-4 text-sm text-gray-600 md:items-center"
+    >
+      <p class="">© 2025 {{ config.extra.firm.name }}</p>
+      <p class="max-w-lg md:text-center">
+        <a href="www.advokatsamfundet.se/konsumenttvistnamnden/"
+          >Advokatsamfundets konsumenttvistnämnd</a
+        >
+        är en nämnd för alternativ tvistlösning som prövar arvodestvister eller
+        andra ekonomiska krav som en konsument riktar mot en advokat eller en
+        advokatbyrå.
       </p>
-      <p class="text-sm text-gray-600">
-        Statically hosted in Sweden by <a href="#">statichost.eu</a>
-      </p>
+      <p class="">Made with love by <a href="https://cv.nsld.se">NSLD</a>.</p>
     </div>
   </div>
 </footer>
