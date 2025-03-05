@@ -1,34 +1,28 @@
-<div class="group flex flex-col gap-2">
-  <div class="h-48 w-full rounded-lg sm:h-full">
+<div class="group flex flex-col gap-4">
+  <div class="h-full w-full rounded-lg">
     {% set img_path = person.extra.thumbnail %} {% set img =
     resize_image(path=img_path, width=400, height=300, format="webp") %}
     <img
       src="{{img.url}}"
       alt="{{person.title}}"
-      class="aspect-square h-full w-full rounded-xl object-cover saturate-0 transition duration-300 group-hover:saturate-100"
+      class="h-full w-full rounded-xl object-cover saturate-0 transition duration-300 group-hover:saturate-100"
     />
   </div>
-  <div class="flex w-full flex-col justify-end gap-2">
-    <hgroup>
-      <a href="/medarbetare/{{person.slug}}" class="text-lg font-semibold"
-        >{{person.title}}</a
-      >
 
-      <p class="text-sm text-gray-500">{{person.extra.jobTitle}}</p>
-    </hgroup>
-    <div class="flex gap-4">
-      {% set icon_path = "static/icon/mail.svg" %} {% set icon =
-      load_data(path=icon_path) %} {% set button_url =
-      "mailto:{{person.extra.email}}" %} {% set button_text = "Epost" %} {%
-      include "partials/card-button.html" %} {% set icon_path =
-      "static/icon/phone.svg" %} {% set icon = load_data(path=icon_path) %} {%
-      set button_url = "tel:{{person.extra.phone}}" %} {% set button_text =
-      "Telefon" %} {% include "partials/card-button.html" %}
-    </div>
-    {#
-    <a href="/medarbetare/{{person.slug}}" class="text-sm text-gray-500"
-      >Läs mer</a
-    >
-    #}
+  <hgroup class="h-full">
+    <a href="/medarbetare/{{person.slug}}" class="font-bold">
+      {{person.title}}
+    </a>
+
+    <p class="text-sm text-gray-500">{{person.extra.jobTitle}}</p>
+  </hgroup>
+  <div class="flex gap-4">
+    {% set icon_path = "static/icon/mail.svg" %} {% set icon =
+    load_data(path=icon_path) %} {% set button_url =
+    "mailto:{{person.extra.email}}" %} {% set button_text = "Epost" %} {%
+    include "partials/card-button.html" %} {% set icon_path =
+    "static/icon/phone.svg" %} {% set icon = load_data(path=icon_path) %} {% set
+    button_url = "tel:{{person.extra.phone}}" %} {% set button_text = "Telefon"
+    %} {% include "partials/card-button.html" %}
   </div>
 </div>
