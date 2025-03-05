@@ -22,11 +22,11 @@ description = "Advokatfirman Evidentia är specialiserad på brottmål inklusive
 [firm.contact]
 cta_text = "Kontakta oss"
 phone = "08-785 01 15"
-email = "info@evidentia.law"
+email = "info@adv-evidentia.se"
 
 [firm.address]
 street = "Jakob Westingatan 1A"
-zip = "12345"
+zip = "112 20"
 city = "Stockholm"
 
 [firm.hours]
@@ -34,5 +34,5 @@ office = "08:30-16:30"
 phone = "08:00-18:00"
 
 [social]
-linkedin = " https://linkedin.com/company/evidentialaw"
-twitter = "https://twitter.com/evidentialaw"
+linkedin = "-"
+twitter = "-"
