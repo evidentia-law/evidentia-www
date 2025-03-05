@@ -4,9 +4,8 @@ weight: 1
 extra:
   jobTitle: Advokat
   thumbnail: /static/img/uploads/carl-henric-ringblom.jpg
-  email: carl.henric.ringblom@evidentia.law
-  phone: "0767731994"
+  email: info@adv-evidentia.se
+  phone: 08-7850115
 exclude_from_cms: false
 ---
-## Utbildning
-- 2019–2020
+\-
