@@ -1,9 +1,10 @@
 local_backend: true
 media_folder: "/static/img/uploads"
 media_library:
-  name: uploadcare
+  name: cloudinary
   config:
-    publicKey: "5179663610b6ff28c03f"
+    cloud_name: "evidentia"
+    publicKey: "594761371261541"
   settings:
     autoFilename: true
 backend:
