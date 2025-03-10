@@ -1,9 +1,8 @@
 <div class="group flex flex-col gap-4">
   <div class="h-full w-full rounded-lg">
-    {% set img_path = person.extra.thumbnail %} {% set img =
-    resize_image(path=img_path, width=400, height=300, format="webp") %}
+    {% set img_path = person.extra.thumbnail %}
     <img
-      src="{{img.url}}"
+      src="{{img.url}}/resize/400x300/format/webp"
       alt="{{person.title}}"
       class="h-full w-full rounded-xl object-cover saturate-0 transition duration-300 group-hover:saturate-100"
     />
