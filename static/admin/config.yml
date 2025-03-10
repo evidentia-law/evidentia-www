@@ -2,6 +2,7 @@ local_backend: true
 media_folder: "/static/img/uploads"
 media_library:
   name: cloudinary
+  output_filename_only: true
   config:
     cloud_name: "evidentia"
     api_key: "594761371261541"
