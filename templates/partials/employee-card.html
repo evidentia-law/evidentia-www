@@ -2,9 +2,9 @@
   <div class="h-full w-full rounded-lg">
     {% set img_path = person.extra.thumbnail %}
     <img
-      src="https://res.cloudinary.com/evidentia/image/upload/c_fill,w_310,h_210/{{img_path}}"
+      src="https://res.cloudinary.com/evidentia/image/upload/c_crop,g_auto,w_310,h_210/{{img_path}}"
       alt="{{person.title}}"
-      class="h-full w-full rounded-xl object-cover saturate-0 transition duration-300 group-hover:saturate-100"
+      class="ransition h-full w-full rounded-xl object-cover duration-300"
     />
   </div>
 
