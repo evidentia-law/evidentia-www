@@ -3,7 +3,7 @@ media_folder: "/static/img/uploads"
 media_library:
   name: uploadcare
   config:
-    publicKey: 5179663610b6ff28c03f
+    publicKey: "5179663610b6ff28c03f"
 backend:
   name: git-gateway
   branch: "main"
