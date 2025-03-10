@@ -3,7 +3,7 @@ title: Carl-Henric Ringblom
 weight: 1
 extra:
   jobTitle: Advokat
-  thumbnail: Carl-Henric-Ringblom_15.04.23_zvasy3.jpg
+  thumbnail: /static/img/uploads/ch_e2mqdp.webp
   email: info@adv-evidentia.se
   phone: 08-7850115
 exclude_from_cms: false
