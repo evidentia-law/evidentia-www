@@ -3,7 +3,7 @@ title: Klara Lundberg
 weight: 4
 extra:
   jobTitle: Biträdande jurist
-  thumbnail: https://ucarecdn.com/c399832f-e766-49dd-855e-1598dad595c8/-/crop/640x786/75,214/-/preview/
+  thumbnail: https://ucarecdn.com/c39e79f8-397e-49a9-805e-a782c66b1571/-/crop/618x877/64,123/-/preview/
   bio: test
   email: info@adv-evidentia.se
   phone: 08-7850115
