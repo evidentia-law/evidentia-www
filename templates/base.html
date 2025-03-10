@@ -7,6 +7,15 @@
       {% set site_data = load_data(path="data/site.toml") %} {{
       site_data.firm.name }} {% if page.title %} – {{ page.title }} {% endif %}
     </title>
+    <meta name="description" content="{{ site_data.firm.description }}" />
+    <meta property="og:title" content="{{ site_data.firm.name }}" />
+    <meta
+      property="og:description"
+      content="{{ site_data.firm.description }}"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://adv-evidentia.se/" />
+    <meta name="robots" content="index, follow" />
     <link
       rel="icon"
       type="image/png"
