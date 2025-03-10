@@ -15,7 +15,8 @@ extra:
     relationships whenever possible.
 exclude_from_cms: false
 ---
-Om Du är misstänkt för ett brott har Du många gånger rätt till en 
-offentlig försvarare. Det är en advokat som företräder Dig i kontakter 
-med polis, åklagare och domstol. Som brottsmisstänkt kan det vara 
+
+Om Du är misstänkt för ett brott har Du många gånger rätt till en
+offentlig försvarare. Det är en advokat som företräder Dig i kontakter
+med polis, åklagare och domstol. Som brottsmisstänkt kan det vara
 värdefullt att biträdas av en offentlig försvarare.
