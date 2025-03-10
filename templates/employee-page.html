@@ -5,10 +5,9 @@
 >
   <div class="flex flex-col gap-8 overflow-hidden">
     <div class="h-98 overflow-hidden shadow">
-      {% set img_path = page.extra.thumbnail %} {% set img =
-      resize_image(path=img_path, width=500, height=700, format="webp") %}
+      {% set img_path = page.extra.thumbnail %}
       <img
-        src="{{img.url}}"
+        src="{{img.url}}/resize/800x600/format/webp"
         alt="{{page.title}}"
         class="h-full w-full rounded-xl object-cover transition duration-300"
       />
@@ -27,11 +26,11 @@
         set button_url = "tel:{{page.extra.phone}}" %} {% set button_text =
         page.extra.phone %} {% include "partials/card-button.html" %}
       </div>
-	  {% if page.content  %}
+      {% if page.content %}
       <div class="mt-4 max-w-2xl text-gray-900">
         <article class="prose">{{page.content | safe}}</article>
       </div>
-	  {% endif %}
+      {% endif %}
     </div>
   </div>
 </div>
