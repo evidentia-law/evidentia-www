@@ -2,6 +2,26 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
+  --color-decorative-icon: var(--color-blue-50);
+  --color-highlight-icon: var(--color-blue-700);
+  --color-inline-icon: var(--color-stone-900);
+
+  --color-link: var(--color-stone-800);
+  --color-link-hover: var(--color-stone-900);
+
+  --color-body-text: var(--color-stone-950);
+  --color-faded-text: var(--color-stone-800);
+
+  --color-surface-1: var(--color-stone-50);
+  --color-surface-2: var(--color-stone-100);
+  --color-surface-2: var(--color-stone-200);
+  --color-surface-3: var(--color-stone-300);
+  --color-surface-4: var(--color-stone-400);
+  --color-surface-5: var(--color-stone-500);
+  --color-surface-6: var(--color-stone-600);
+  --color-surface-7: var(--color-stone-700);
+  --color-surface-8: var(--color-stone-800);
+
   --animate-fadeIn: fadeIn 0.5s ease-out forward;
   @keyframes fadeIn {
     0% {

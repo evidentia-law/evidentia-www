@@ -1,7 +1,5 @@
-<div
-  class="stagger-item js-enabled:opacity-0 js-enabled:translate-y-20 relative flex flex-col gap-4 pl-16 transition-all duration-500"
->
-  <dt class="text-base/7 font-semibold text-gray-900">
+<div class="relative flex flex-col gap-4 pl-16">
+  <dt class="text-base/7 font-semibold">
     {% if service.extra.icon %} {% set icon_path = "static/icon/" ~
     service.extra.icon ~ ".svg" %} {% set icon = load_data(path=icon_path) %}
     <div
@@ -11,5 +9,5 @@
     </div>
     {% endif %} {{ service.title }}
   </dt>
-  <dd class="text-base/7 text-gray-600">{{ service.description }}</dd>
+  <dd class="text-faded-text text-base/7">{{ service.description }}</dd>
 </div>
