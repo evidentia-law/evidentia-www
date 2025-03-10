@@ -1,23 +1,25 @@
 {%extends "page.html"%} {%block content%}
 
 <div
-  class="mx-auto mt-4 max-w-2xl overflow-hidden px-4 sm:px-6 lg:mt-8 lg:px-8"
+  class="mx-auto mt-4 max-w-7xl overflow-hidden rounded-lg px-4 sm:px-6 lg:mt-8 lg:px-8"
 >
-  <div class="flex flex-col gap-8 overflow-hidden">
-    <div class="h-98 overflow-hidden shadow">
+  <div
+    class="flex flex-col items-center gap-4 overflow-hidden md:flex-row md:gap-8"
+  >
+    <div class="h-64 md:max-w-64">
       {% set img_path = page.extra.thumbnail %}
       <img
-        src="https://res.cloudinary.com/evidentia/image/upload/c_fill,w_650,h_300/{{img_path}}"
+        src="https://res.cloudinary.com/evidentia/image/upload/c_fill,g_auto,w_650,h_300/{{img_path}}"
         alt="{{page.title}}"
         class="h-full w-full rounded-xl object-cover transition duration-300"
       />
     </div>
-    <div class="flex flex-col gap-2">
+    <div class="flex w-full flex-col gap-2">
       <hgroup class="flex flex-col gap-2">
         <h1 class="text-3xl font-semibold text-gray-900">{{page.title}}</h1>
-        <p class="text-sm text-gray-500">{{page.extra.jobTitle}}</p>
+        <p class="text-gray-500">{{page.extra.jobTitle}}</p>
       </hgroup>
-      <div class="flex flex-col gap-4 md:flex-row">
+      <div class="grid gap-2">
         {% set icon_path = "static/icon/mail.svg" %} {% set icon =
         load_data(path=icon_path) %} {% set button_url =
         "mailto:{{page.extra.email}}" %} {% set button_text = page.extra.email
@@ -26,12 +28,11 @@
         set button_url = "tel:{{page.extra.phone}}" %} {% set button_text =
         page.extra.phone %} {% include "partials/card-button.html" %}
       </div>
-      {% if page.content %}
-      <div class="mt-4 max-w-2xl text-gray-900">
-        <article class="prose">{{page.content | safe}}</article>
-      </div>
-      {% endif %}
     </div>
   </div>
+  <div class="mt-4 max-w-2xl text-gray-900">
+    <article class="prose">{{page.content | safe}}</article>
+  </div>
 </div>
+
 {% include "partials/employees-list.html" %} {%endblock%}
