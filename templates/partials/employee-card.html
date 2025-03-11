@@ -1,27 +1,30 @@
-<div class="flex flex-col gap-2 rounded">
+<div class="grid gap-2">
   <div class="h-64 w-full rounded-lg">
-    {% set img_path = person.extra.thumbnail %}
+    {% set img_path = person.extra.thumbnail %} {% set img =
+    resize_image(path=img_path, width=320, height=480, op="fill", format="webp")
+    %}
     <img
-      src="https://res.cloudinary.com/evidentia/image/upload/c_fill,g_north,w_650,h_400/{{img_path}}"
+      src="{{img.url}}"
       alt="{{person.title}}"
-      class="ransition border-surface-4 h-64 w-full rounded-lg border object-cover duration-300"
+      class="border-surface-3 h-64 w-full rounded border object-cover object-top duration-300"
     />
   </div>
 
-  <hgroup class="h-full">
-    <a href="/medarbetare/{{person.slug}}" class="text-xl font-bold">
-      {{person.title}}
-    </a>
-
-    <p class="text-faded-text">{{person.extra.jobTitle}}</p>
-  </hgroup>
-  <div class="flex gap-4">
-    {% set icon_path = "static/icon/mail.svg" %} {% set icon =
-    load_data(path=icon_path) %} {% set button_url =
-    "mailto:{{person.extra.email}}" %} {% set button_text = "Epost" %} {%
-    include "partials/card-button.html" %} {% set icon_path =
-    "static/icon/phone.svg" %} {% set icon = load_data(path=icon_path) %} {% set
-    button_url = "tel:{{person.extra.phone}}" %} {% set button_text = "Telefon"
-    %} {% include "partials/card-button.html" %}
+  <div class="border-surface-4 flex flex-col gap-2">
+    <div class="h-full">
+      <a href="/medarbetare/{{person.slug}}" class="link text-lg font-bold">
+        {{person.title}}
+      </a>
+      <p class="text-faded-text">{{person.extra.jobTitle}}</p>
+    </div>
+    <div class="flex gap-4">
+      {% set icon_path = "static/icon/mail.svg" %} {% set icon =
+      load_data(path=icon_path) %} {% set button_url =
+      "mailto:{{person.extra.email}}" %} {% set button_text = "Epost" %} {%
+      include "partials/card-button.html" %} {% set icon_path =
+      "static/icon/phone.svg" %} {% set icon = load_data(path=icon_path) %} {%
+      set button_url = "tel:{{person.extra.phone}}" %} {% set button_text =
+      "Telefon" %} {% include "partials/card-button.html" %}
+    </div>
   </div>
 </div>

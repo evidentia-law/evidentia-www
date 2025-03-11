@@ -14,12 +14,13 @@
   stroke: var(--color-inline-icon);
 }
 
-a {
+.link {
   text-decoration: underline dotted;
   color: var(--color-link);
 
   &:hover {
     text-decoration: underline;
     color: var(--color-link-hover);
+    background-color: var(--color-yellow-400);
   }
 }

@@ -7,11 +7,13 @@
     class="bg-s flex flex-col items-center gap-4 overflow-hidden md:flex-row md:gap-8"
   >
     <div class="h-128 md:max-w-128">
-      {% set img_path = page.extra.thumbnail %}
+      {% set img_path = page.extra.thumbnail %} {% set img =
+      resize_image(path=img_path, width=500, height=700, op="fill",
+      format="webp") %}
       <img
-        src="https://res.cloudinary.com/evidentia/image/upload/c_fill,ar_3:4,g_north,w_1070/{{img_path}}"
+        src="{{img.url}}"
         alt="{{page.title}}"
-        class="h-full w-full rounded-xl object-cover transition duration-300"
+        class="aspect-3/4 h-full w-full rounded-xl object-cover object-top transition duration-300"
       />
     </div>
     <div class="flex w-full flex-col gap-2">

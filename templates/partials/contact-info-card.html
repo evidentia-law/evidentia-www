@@ -1,0 +1,33 @@
+<div class="absolute top-0 w-full max-w-lg overflow-hidden p-8 lg:p-11">
+  <div class="border-surface-3 bg-surface-1 grid gap-4 rounded border p-6">
+    <div class="flex items-center gap-2">
+      {% set icon_path = "static/icon/phone.svg" %} {% set icon =
+      load_data(path=icon_path) %}
+      <div class="contact-icon">{{ icon | safe }}</div>
+      <a href="tel:{{site_data.firm.contact.phone}}" class="link">
+        {{site_data.firm.contact.phone}}
+      </a>
+    </div>
+    <div class="flex items-center gap-2">
+      {% set icon_path = "static/icon/mail.svg" %} {% set icon =
+      load_data(path=icon_path) %}
+      <div class="contact-icon">{{ icon | safe }}</div>
+      <a href="mailto:{{site_data.firm.contact.email}}" class="link">
+        {{site_data.firm.contact.email}}
+      </a>
+    </div>
+
+    <div class="flex items-center gap-2">
+      {% set icon_path = "static/icon/map-pin.svg" %} {% set icon =
+      load_data(path=icon_path) %}
+      <div class="contact-icon">{{ icon | safe }}</div>
+      <a
+        href="https://www.google.com/maps/place/Advokat+Gunnar+Eberhardt+AB/@59.3270458,18.0417523,17z/data=!3m1!4b1!4m6!3m5!1s0x465f77d8df653397:0xe7d0d918e40816ff!8m2!3d59.3270431!4d18.0443272!16s%2Fg%2F1hc1tl976?entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D"
+        class="link"
+      >
+        {{site_data.firm.address.street}}, {{site_data.firm.address.zip}}
+        {{site_data.firm.address.city}}
+      </a>
+    </div>
+  </div>
+</div>

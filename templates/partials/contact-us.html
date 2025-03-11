@@ -1,66 +1,13 @@
-<section class="pb-8">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="mb-10 lg:mb-0">
-      <div class="group w-full">
-        <div class="relative flex">
-          <div
-            id="map"
-            class="min-h-128 w-full rounded-2xl border border-slate-200 object-cover bg-blend-multiply lg:rounded-l-2xl"
-          ></div>
+<div class="mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8">
+  <div class="relative flex">
+    <div
+      id="map"
+      class="border-surface-3 min-h-128 w-full rounded-2xl border object-cover bg-blend-multiply lg:rounded-l-2xl"
+    ></div>
 
-          <div
-            class="absolute top-0 w-full max-w-lg overflow-hidden p-8 lg:p-11"
-          >
-            <div
-              class="block rounded-lg border border-slate-200 bg-white p-6 backdrop-blur-md"
-            >
-              <a
-                href="tel:{{site_data.firm.contact.phone}}"
-                class="mb-6 flex items-center"
-              >
-                {% set icon_path = "static/icon/phone.svg" %} {% set icon =
-                load_data(path=icon_path) %}
-                <div class="contact-icon">{{ icon | safe }}</div>
-
-                <h5 class="ml-5 text-base leading-6 font-normal text-black">
-                  {{site_data.firm.contact.phone}}
-                </h5>
-              </a>
-              <a
-                href="mailto:{{site_data.firm.contact.email}}"
-                class="mb-6 flex items-center"
-              >
-                {% set icon_path = "static/icon/mail.svg" %} {% set icon =
-                load_data(path=icon_path) %}
-                <div class="contact-icon">{{ icon | safe }}</div>
-                <h5 class="ml-5 text-base leading-6 font-normal text-black">
-                  {{site_data.firm.contact.email}}
-                </h5>
-              </a>
-              <a
-                href="https://www.google.com/maps/place/Advokat+Gunnar+Eberhardt+AB/@59.3270458,18.0417523,17z/data=!3m1!4b1!4m6!3m5!1s0x465f77d8df653397:0xe7d0d918e40816ff!8m2!3d59.3270431!4d18.0443272!16s%2Fg%2F1hc1tl976?entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D"
-                class="flex items-center"
-              >
-                {% set icon_path = "static/icon/map-pin.svg" %} {% set icon =
-                load_data(path=icon_path) %}
-                <div class="contact-icon">{{ icon | safe }}</div>
-                <h5
-                  class="ml-5 grid text-base leading-6 font-normal text-black sm:flex"
-                >
-                  <span>{{site_data.firm.address.street}}, </span>
-                  <span
-                    >{{site_data.firm.address.zip}}
-                    {{site_data.firm.address.city}}</span
-                  >
-                </h5>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    {% include "partials/contact-info-card.html" %}
   </div>
-</section>
+</div>
 {% include "partials/contact-form.html" %}
 
 <script>
@@ -73,7 +20,7 @@
     zoom: 13, // starting zoom
   });
   const marker = new mapboxgl.Marker({
-    color: "#818CF8",
+    color: "var(--color-brand)",
   })
     .setLngLat([18.0443, 59.3269])
     .addTo(map);

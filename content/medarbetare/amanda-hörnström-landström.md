@@ -3,7 +3,7 @@ title: Amanda Hörnström Landström
 weight: 8
 extra:
   jobTitle: Sekreterare
-  thumbnail: amanda-2_e2mwgo.webp
+  thumbnail: /img/uploads/amanda.jpg
   email: info@adv-evidentia.se
   phone: 08-7850115
 exclude_from_cms: false

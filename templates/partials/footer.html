@@ -1,25 +1,25 @@
-<footer class="border border-t border-gray-300 bg-white py-12">
+<footer class="bg-surface-1 border-surface-3 border border-t py-12">
   <div class="mx-auto flex max-w-7xl flex-col gap-8 p-4 sm:px-6 lg:px-8">
     <div class="flex flex-col justify-center gap-8 md:flex-row">
       {% for navItem in config.extra.menu_pages %}
-      <a href="{{ navItem.url }}" class="navigation-link">
-        {{ navItem.name }}
-      </a>
+      <a href="{{ navItem.url }}" class="link"> {{ navItem.name }} </a>
       {% endfor %}
     </div>
     <div
-      class="flex w-full flex-col gap-4 text-sm text-gray-600 md:items-center"
+      class="text-faded-text flex w-full flex-col gap-4 text-sm md:items-center"
     >
       <p class="">© 2025 {{ config.extra.firm.name }}</p>
       <p class="max-w-lg md:text-center">
-        <a href="www.advokatsamfundet.se/konsumenttvistnamnden/"
+        <a href="www.advokatsamfundet.se/konsumenttvistnamnden/" class="link"
           >Advokatsamfundets konsumenttvistnämnd</a
         >
         är en nämnd för alternativ tvistlösning som prövar arvodestvister eller
         andra ekonomiska krav som en konsument riktar mot en advokat eller en
         advokatbyrå.
       </p>
-      <p class="">Made with love by <a href="https://cv.nsld.se">NSLD</a>.</p>
+      <p class="">
+        Made with love by <a href="https://nsld.dev" class="link">NSLD</a>.
+      </p>
     </div>
   </div>
 </footer>

@@ -1,3 +1,24 @@
-node_modules/
+# Zola build output
 public/
+
+# Netlify deploy folder (if using Netlify CLI)
+.netlify/
+
+# Netlify CMS temp files
+admin/config.yml.lock
+
+# Zola cache
+.cache/
+
+# Editor-specific files
+*.swp
+*.swo
+*.swn
+.idea/
+.vscode/
+.DS_Store
 .prettierrc
+Thumbs.db
+
+# Node modules (if using npm/yarn for assets)
+node_modules/

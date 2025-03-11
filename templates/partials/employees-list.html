@@ -1,7 +1,7 @@
 <div class="mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:px-8 lg:pb-4">
   {% set divider_title = "Medarbetare" %} {% set divider_id = "medarbetare" %}
   {% include "partials/divider.html" %}
-  <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+  <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
     {% set people = get_section(path="medarbetare/_index.md") %} {% for person
     in people.pages %} {% include "partials/employee-card.html" %} {% endfor %}
   </div>
