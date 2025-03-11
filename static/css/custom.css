@@ -19,6 +19,5 @@
 
   &:hover {
     text-decoration: underline;
-    background-color: var(--color-yellow-400);
   }
 }
