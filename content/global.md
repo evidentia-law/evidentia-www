@@ -1,6 +1,6 @@
 ---
 menu_pages:
-  - url: /#
+  - url: /#top
     name: Hem
   - url: /#verksamhetsomraden
     name: Verksamhetsområden
