@@ -1,5 +1,5 @@
 ---
-title: Målsägandebiträde & Särskild företrädare
+title: Målsägandebiträde & särskild företrädare
 description: "Om du har utsatts för brott har du ofta rätt till ett målsägandebiträde. Målsägandebiträdets roll är att ge stöd och rådgivning till målsägande under polisens utredning och vid en rättegång. Det är även målsägandebiträdets uppdrag att vid rättegången hjälpa till med ett skadeståndsanspråk. Om du begär en ett målsägandebiträde från Advokatfirman Evidentia får du en engagerad och erfaren jurist som ser till att dina intressen blir respekterade.
 Vi på Advokatfirman Evidentia åtar oss även uppdrag som särskild företrädare för barn."
 weight: 2

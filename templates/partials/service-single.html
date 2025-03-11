@@ -3,7 +3,7 @@
     {% if service.extra.icon %} {% set icon_path = "static/icon/" ~
     service.extra.icon ~ ".svg" %} {% set icon = load_data(path=icon_path) %}
     <div
-      class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-blue-900"
+      class="bg-brand hover:bg-brand-hover absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg"
     >
       {{ icon | safe }}
     </div>

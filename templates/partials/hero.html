@@ -1,20 +1,19 @@
 <section class="pt-12">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-6">
-    <hgroup class="mx-auto max-w-2xl lg:text-center">
-      <h2 class="text-xl font-semibold text-blue-900 uppercase">
+    <div class="flex w-full flex-col items-center">
+      <h2 class="text-brand text-xl font-semibold uppercase">
         {{page_tagline}}
       </h2>
-      <h1
-        class="text-5xl font-semibold tracking-tight text-pretty sm:text-7xl lg:text-balance"
-      >
+      <h1 class="text-center text-5xl font-semibold tracking-tight sm:text-7xl">
         {{page_title}}
       </h1>
-    </hgroup>
-    <button
-      class="text-semibold bg-blue-900 px-8 py-4 text-center text-blue-50"
-    >
-      Kontakta oss
-    </button>
+      <a
+        href="mailto:{{ config.extra.firm.email }}"
+        class="text-semibold bg-brand mt-8 rounded px-8 py-3 text-center text-blue-50 hover:brightness-130"
+      >
+        Kontakta oss
+      </a>
+    </div>
     {% set divider_title = "Verksamhetsområden" %} {% set divider_id =
     "verksamhetsomraden" %} {% include "partials/divider.html" %} {% include
     "partials/service-list.html" %}
