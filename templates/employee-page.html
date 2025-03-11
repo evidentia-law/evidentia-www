@@ -1,39 +1,43 @@
 {%extends "page.html"%} {%block content%}
 
-<div
-  class="mx-auto mt-4 max-w-7xl overflow-hidden rounded-lg px-4 sm:px-6 lg:mt-8 lg:px-8"
->
-  <div
-    class="bg-s flex flex-col items-center gap-4 overflow-hidden md:flex-row md:gap-8"
-  >
-    <div class="h-128 md:max-w-128">
+<div class="mx-auto mt-4 max-w-7xl px-4 sm:px-6 lg:mt-8 lg:px-8">
+  <div class="flex flex-col items-stretch gap-4 sm:flex-row">
+    <div class="sm:w-1/3 lg:w-1/2">
       {% set img_path = page.extra.thumbnail %} {% set img =
       resize_image(path=img_path, width=500, height=700, op="fill",
       format="webp") %}
       <img
         src="{{img.url}}"
         alt="{{page.title}}"
-        class="aspect-3/4 h-full w-full rounded-xl object-cover object-top transition duration-300"
+        class="aspect-3/4 h-full max-h-98 w-full rounded object-cover object-top transition duration-300 sm:max-h-full"
       />
     </div>
-    <div class="flex w-full flex-col gap-2">
-      <hgroup class="flex flex-col gap-2">
-        <h1 class="text-3xl font-semibold">{{page.title}}</h1>
-        <p class="text-faded-text">{{page.extra.jobTitle}}</p>
+
+    <div
+      class="text-faded-text border-surface-3 flex w-full flex-col gap-2 rounded border p-4"
+    >
+      <hgroup
+        class="border-surface-3 flex flex-col gap-2 border-b pb-4 md:flex-row md:items-end md:justify-between"
+      >
+        <div class="flex w-full flex-col gap-2">
+          <h1 class="text-3xl font-semibold">{{page.title}}</h1>
+          <p class="text-lg">{{page.extra.jobTitle}}</p>
+        </div>
+        <div class="flex w-full flex-wrap gap-4 md:justify-end">
+          {% set icon_path = "static/icon/mail.svg" %} {% set icon =
+          load_data(path=icon_path) %} {% set button_url =
+          "mailto:{{page.extra.email}}" %} {% set button_text = "Skicka epost"
+          %} {% include "partials/card-button.html" %} {% set icon_path =
+          "static/icon/phone.svg" %} {% set icon = load_data(path=icon_path) %}
+          {% set button_url = "tel:{{page.extra.phone}}" %} {% set button_text =
+          page.extra.phone %} {% include "partials/card-button.html" %}
+        </div>
       </hgroup>
-      <div class="grid gap-2">
-        {% set icon_path = "static/icon/mail.svg" %} {% set icon =
-        load_data(path=icon_path) %} {% set button_url =
-        "mailto:{{page.extra.email}}" %} {% set button_text = page.extra.email
-        %} {% include "partials/card-button.html" %} {% set icon_path =
-        "static/icon/phone.svg" %} {% set icon = load_data(path=icon_path) %} {%
-        set button_url = "tel:{{page.extra.phone}}" %} {% set button_text =
-        page.extra.phone %} {% include "partials/card-button.html" %}
-      </div>
+
+      <article class="prose prose-stone border-surface-4">
+        {{page.content | safe}}
+      </article>
     </div>
-  </div>
-  <div class="mt-4 max-w-2xl">
-    <article class="prose">{{page.content | safe}}</article>
   </div>
 </div>
 {% include "partials/employees-list.html" %} {%endblock%}
