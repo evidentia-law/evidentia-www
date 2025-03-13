@@ -10,10 +10,9 @@ menu_pages:
     name: Kontakt
 firm:
   name: Evidentia
-  tagline: Vi står upp för dina rättigheter
+  tagline: Specialister på brottmål
   description: Advokatfirman Evidentia är specialiserad på brottmål inklusive
-    eko-brottmål och består av advokaterna Carl-Henric Ringblom, Anna Carlén och
-    Anna Alm samt biträdande juristerna Klara Lundberg och Ellen Harald.
+    eko-brottmål.
   contact:
     cta_text: Kontakta oss
     phone: 08-785 01 15
