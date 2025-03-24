@@ -998,9 +998,6 @@
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
-  .mt-8 {
-    margin-top: calc(var(--spacing) * 8);
-  }
   .mt-12 {
     margin-top: calc(var(--spacing) * 12);
   }
@@ -1044,23 +1041,8 @@
   .min-h-128 {
     min-height: calc(var(--spacing) * 128);
   }
-  .w-54 {
-    width: calc(var(--spacing) * 54);
-  }
-  .w-56 {
-    width: calc(var(--spacing) * 56);
-  }
   .w-62 {
     width: calc(var(--spacing) * 62);
-  }
-  .w-74 {
-    width: calc(var(--spacing) * 74);
-  }
-  .w-84 {
-    width: calc(var(--spacing) * 84);
-  }
-  .w-92 {
-    width: calc(var(--spacing) * 92);
   }
   .w-full {
     width: 100%;
@@ -1298,6 +1280,15 @@
   }
   .text-gray-900 {
     color: var(--color-gray-900);
+  }
+  .text-stone-300 {
+    color: var(--color-stone-300);
+  }
+  .text-stone-700 {
+    color: var(--color-stone-700);
+  }
+  .text-stone-800 {
+    color: var(--color-stone-800);
   }
   .italic {
     font-style: italic;
