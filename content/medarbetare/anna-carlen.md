@@ -10,4 +10,8 @@ extra:
 exclude_from_cms: false
 ---
 
-\-
+## Erfarenhet
+
+- Juristexamen,
+- Biträdande jurist
+- Advokat

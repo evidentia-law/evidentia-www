@@ -23,6 +23,7 @@ menu_pages = [
 
 [extra.firm]
 name = "Evidentia"
+logo = "/img/logo.png"
 tagline = "Vi står upp för dina rättigheter"
 description = "Advokatfirman Evidentia är specialiserad på brottmål inklusive eko-brottmål och består av advokaterna Carl-Henric Ringblom, Anna Carlén och Anna Alm samt biträdande juristerna Klara Lundberg och Ellen Harald."
 cta_text = "Kontakta oss"

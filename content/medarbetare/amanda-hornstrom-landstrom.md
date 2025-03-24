@@ -2,11 +2,11 @@
 title: Amanda Hörnström Landström
 weight: 8
 extra:
-  jobTitle: Sekreterare
+  jobTitle: Juristassistent
   thumbnail: /img/uploads/amanda.jpg
   email: info@adv-evidentia.se
   phone: 08-7850115
 exclude_from_cms: false
 ---
 
-\-
+Biträder Advokatfirmans advokater och jurister i deras arbete.

@@ -1,17 +1,19 @@
 <section class="pt-12">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-6">
     <div class="flex w-full flex-col items-center">
-      <h2 class="text-brand text-xl font-semibold uppercase">
-        {{page_tagline}}
-      </h2>
-      <h1
-        class="text-brand text-center text-5xl font-semibold tracking-tight sm:text-7xl"
-      >
-        {{page_title}}
-      </h1>
+      {% set img_path = config.extra.firm.logo %} {% set img =
+      resize_image(path=img_path, width=550, height=160, op="fill",
+      format="webp") %}
+      <div class="w-62 sm:w-76">
+        <img
+          src="{{img.url}}"
+          alt="{{config.extra.firm.name}}"
+          class="w-full object-fill object-center"
+        />
+      </div>
       <a
         href="mailto:{{ config.extra.firm.email }}"
-        class="text-semibold bg-brand mt-8 rounded px-8 py-3 text-center text-blue-50 hover:brightness-130"
+        class="text-semibold bg-brand mt-12 rounded px-8 py-3 text-center text-blue-50 hover:brightness-130"
       >
         Kontakta oss
       </a>

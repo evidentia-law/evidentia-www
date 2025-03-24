@@ -1,6 +1,6 @@
 ---
 title: Förvaltningsrätt
-description: Vi på Advokatfirman Evidentia åtar oss uppdrag som offentligt biträde inom förvaltningsrätten. Våra jurister har stor erfarenhet av rådgivning inom asylrätt och migrationsrätt. Vi har även erfarenhet av LVU, LVM, LPT och LRV.
+description: Advokatfirman Evidentias advokater och jurister åtar sig uppdrag som offentligt biträde. Våra advokater och jurister har lång erfarenhet av rådgivning inom asylrätt och migrationsrätt. Vi har även lång erfarenhet av tvångsmål såsom LVU, LVM, LPT och LRV m.m.
 weight: 3
 extra:
   icon: laurel-wreath
