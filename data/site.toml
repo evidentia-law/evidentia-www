@@ -1,18 +1,9 @@
-[[menu_pages]]
-url = "/"
-name = "Hem"
-
-[[menu_pages]]
-url = "/#medarbetare"
-name = "Medarbetare"
-
-[[menu_pages]]
-url = "/#kontakt"
-name = "Kontakt"
-
-[[menu_pages]]
-url = "/#verksamhetsomraden"
-name = "Verksamhetsområden"
+menu_pages = [
+    { url = "/", name = "Hem" },
+    { url = "/#verksamhetsomraden", name = "Verksamhetsområden" },
+    { url = "/#medarbetare", name = "Medarbetare" },
+    { url = "/#kontakt", name = "Kontakt" },
+]
 
 [firm]
 name = "Evidentia"
