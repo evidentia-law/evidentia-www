@@ -9,4 +9,4 @@ extra:
 exclude_from_cms: false
 ---
 
-Biträder Advokatfirmans advokater och jurister i deras arbete.
+Bistår juristerna i det dagliga arbetet och i kontakten med myndigheter.
