@@ -1,5 +1,5 @@
 menu_pages = [
-    { url = "/", name = "Hem" },
+    { url = "/#", name = "Hem" },
     { url = "/#verksamhetsomraden", name = "Verksamhetsområden" },
     { url = "/#medarbetare", name = "Medarbetare" },
     { url = "/#kontakt", name = "Kontakt" },
